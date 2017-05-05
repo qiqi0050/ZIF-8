@@ -62,7 +62,7 @@
 \newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}  %六号  
 \newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}    %七号
 
-%------------------------------标题名称定制-------------------------------%
+%------------------------------设置标题样式-------------------------------%
 %\renewcommand{\contentsname}{目录}  % 将Contents改为目录
 %\renewcommand{\abstractname}{摘要}  % 将Abstract改为摘要
 %\renewcommand{\refname}{参考文献}   % 将References改为参考文献
@@ -73,10 +73,13 @@
 
 \setcounter{secnumdepth}{3} %设置编号深度
 %\renewcommand{\thepart}{\textbf{第\arabic{part}部分}}
-\renewcommand{\thesection}{第\arabic{chapter}.\arabic{section}节}
-\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesection}{第\arabic{chapter}. \arabic{section}节}
+\renewcommand{\thesubsection}{\arabic{chapter}. \arabic{section}. \arabic{subsection}}
 \renewcommand{\thesubsubsection}{(\arabic{subsubsection}) }
-%\renewcommand{\thefootnote}{\alph{footnote}}    %设置脚注样式为小写字母
+% 实现带圈脚注样式
+\DefineFNsymbols{circled}{{\ding{182}}{\ding{183}}{\ding{184}}
+{\ding{185}}{\ding{186}}{\ding{187}}{\ding{188}}{\ding{189}}{\ding{190}}{\ding{191}}}
+\setfnsymbol{circled}
 
 
 %-------------------------------设置页面属性-----------------------------%
@@ -86,12 +89,25 @@
 %\setlength{\baselineskip}{20pt}    %设置行距
 \geometry{left=2.7cm, right=2.7cm, top=3.5cm, bottom=2.6cm} %设置页边距
 \linespread{1.2}            %设置 1.2 倍行距
-%\setlength{\parskip}{0.5\baselineskip}  %设置段间距
+%\setlength{\parskip}{0}  %设置段间距
 \captionsetup{font={small}}     %设置图表标题大小
 
 
 %-------------------------------设置数学环境-----------------------------%
 \setatomsep{2em}    %设置全局化学键长度
+
+%设置高分子的括号
+\newcommand\setpolymerdelim[2]{\def\delimleft{#1}\def\delimright{#2}}
+\def\makebraces[#1,#2]#3#4#5{%
+\edef\delimhalfdim{\the\dimexpr(#1+#2)/2}%
+\edef\delimvshift{\the\dimexpr(#1-#2)/2}%
+\chemmove{%
+\node[at=(#4),yshift=(\delimvshift)]
+{$\left\delimleft\vrule height\delimhalfdim depth\delimhalfdim
+width0pt\right.$};%
+\node[at=(#5),yshift=(\delimvshift)]
+{$\left.\vrule height\delimhalfdim depth\delimhalfdim
+width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 
 %-------------------------------设置快捷命令-----------------------------%
 \newcommand{\cdegree}{$^{\circ}$C}  %摄氏度
@@ -120,12 +136,6 @@
 \vskip-2\headrulewidth\vskip-1pt}      %两条线的距离1pt
 \vspace{6mm}}     %双线与下面正文之间的垂直间距
 \makeatother
-
-% 实现带圈脚注样式
-\DefineFNsymbols{circled}{{\ding{182}}{\ding{183}}{\ding{184}}
-{\ding{185}}{\ding{186}}{\ding{187}}{\ding{188}}{\ding{189}}{\ding{190}}{\ding{191}}}
-\setfnsymbol{circled}
-
 
 %-------------------------------文档部分---------------------------------%
 \begin{document}
@@ -221,13 +231,16 @@ PVC 在加工过程中不太稳定，极易发生降解脱除 HCl，其重要原
 CPVC 中氯原子沿碳链分布情况复杂，CPVC 的分子链结构相当于氯乙烯、1,2-二氯乙烯以及 1,1-二氯乙烯的三元共聚物。CPVC 分子中主要结构的摩尔分数为：\chemfig{-CHCl-} 65\%$\sim$70\%；\chemfig{-CH_2-} 20\%$\sim$30\%；\chemfig{-CCl_2-} 5\%$\sim$10\%。随着氯含量的增加，\chemfig{-CHCl-} 和 \chemfig{-CCl_2-} 两种结构单元的总量增加，\chemfig{-CH_2-} 结构单元减少。在 $\omega_{Cl}$ 大于 65\% 以后，CPVC 分子的主要性能由 \chemfig{-CHCl-CHCl-} 结构控制，随着 \chemfig{-CHCl-CHCl-} 结构的增加，CPVC 的玻璃化转变温度提高，耐热性增强。因而提高 CPVC 的性能需要在增加 \chemfig{-CHCl-} 结构和减少 \chemfig{-CH_2-} 结构的同时尽量避免 \chemfig{-CCl_2-} 结构和各种缺陷结构的产生。\chemfig{-CCl_2-} 结构会使分子链的极性减小，导致材料的玻璃化转变温度相应降低；另外，\chemfig{-CCl_2-} 结构易使材料受热脱 HCl，使分子链容易受热分解，热稳定性变差。\par
 CPVC 分解的机理主要包括自由基机理、离子-分子机理和单分子机理。其中自由机理最为普遍，已成为稳定剂形成和发展的理论基础。
 
+\setpolymerdelim[]
+
 \begin{enumerate}[(1) ]
     \item 氯化聚氯乙烯分子中某些薄弱结构，特别是烯丙基氯分解，产生 \lewis{2.,Cl}。
         \begin{center}
         \schemestart
             \chemfig{CH=CH-CH(-[2]Cl)-CH_2}
             \arrow(.mid east--.mid west)
-            \chemfig{CH=CH-\lewis{2.,C}H-CH_2}
+            \chemfig{-[@{op,.5}]CH=CH-\lewis{2.,C}H-CH_2-[@{cl,0.5}]}
+            \makebraces[5pt,5pt]{}{op}{cl}
             \+
             \lewis{0.,Cl}
         \schemestop
