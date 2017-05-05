@@ -1,0 +1,18 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}绪论}{2}
+\contentsline {section}{\numberline {第1.1节}CPVC 简介及其基本性能}{2}
+\contentsline {subsection}{\numberline {1.1.1}CPVC 简介}{2}
+\contentsline {subsection}{\numberline {1.1.2}CPVC 分子结构}{2}
+\contentsline {subsection}{\numberline {1.1.3}氯在 CPVC 中的分布}{2}
+\contentsline {subsection}{\numberline {1.1.4}CPVC 相对于 PVC 的优缺点}{3}
+\contentsline {subsection}{\numberline {1.1.5}CPVC 性能特点}{3}
+\contentsline {subsection}{\numberline {1.1.6}CPVC 降解机理}{4}
+\contentsline {subsection}{\numberline {1.1.7}CPVC 配方设计、混料}{5}
+\contentsline {section}{\numberline {第1.2节}CPVC 的合成方法与结构}{5}
+\contentsline {subsection}{\numberline {1.2.1}氯化反应机理}{5}
+\contentsline {subsection}{\numberline {1.2.2}CPVC 合成方法}{6}
+\contentsline {section}{\numberline {第1.3节}CPVC 树脂的应用}{6}
+\contentsline {section}{\numberline {第1.4节}CPVC 热稳定剂概述}{6}
+\contentsline {subsection}{\numberline {1.4.1}热稳定剂分类}{6}
+\contentsline {subsection}{\numberline {1.4.2}热稳定机理}{7}
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}CPVC 润滑体系研究}{8}
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}CPVC 热稳定体系研究}{9}
