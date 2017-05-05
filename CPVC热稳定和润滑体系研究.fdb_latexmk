@@ -1,18 +1,20 @@
 # Fdb version 3
-["bibtex CPVC热稳定和润滑体系研究"] 1493950440 "CPVC热稳定和润滑体系研究.aux" "CPVC热稳定和润滑体系研究.bbl" "CPVC热稳定和润滑体系研究" 1493950443
+["bibtex CPVC热稳定和润滑体系研究"] 1493974600 "CPVC热稳定和润滑体系研究.aux" "CPVC热稳定和润滑体系研究.bbl" "CPVC热稳定和润滑体系研究" 1493974604
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1492575660 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "CPVC热稳定和润滑体系研究.aux" 1493950443 5367 023281b3b9cd498fad1a6faa9a80a4a6 ""
-  "biblio.bib" 1493367356 3357 d127ae7fd86cc005c5cbd5b67926d26e ""
+  "CPVC热稳定和润滑体系研究.aux" 1493974604 7307 3c7b05cd6e343ac585969294a794ae0f ""
+  "biblio.bib" 1493968285 3377 a316b3e3f7a83ba8ddd2a3ebf7580fe2 ""
   (generated)
-  "CPVC热稳定和润滑体系研究.bbl"
   "CPVC热稳定和润滑体系研究.blg"
-["xdvipdfmx"] 1493950443 "CPVC热稳定和润滑体系研究.xdv" "CPVC热稳定和润滑体系研究.pdf" "CPVC热稳定和润滑体系研究" 1493950443
-  "CPVC热稳定和润滑体系研究.xdv" 1493950443 317776 a2152c6ca964ff98d78e9070df5e9c0f "xelatex"
+  "CPVC热稳定和润滑体系研究.bbl"
+["xdvipdfmx"] 1493974604 "CPVC热稳定和润滑体系研究.xdv" "CPVC热稳定和润滑体系研究.pdf" "CPVC热稳定和润滑体系研究" 1493974604
+  "CPVC热稳定和润滑体系研究.xdv" 1493974604 399680 ab70ad387cc5d0c9977777b09ca4bc1d "xelatex"
   (generated)
   "CPVC热稳定和润滑体系研究.pdf"
-["xelatex"] 1493950440 "CPVC热稳定和润滑体系研究.tex" "CPVC热稳定和润滑体系研究.xdv" "CPVC热稳定和润滑体系研究" 1493950443
+["xelatex"] 1493974600 "CPVC热稳定和润滑体系研究.tex" "CPVC热稳定和润滑体系研究.xdv" "CPVC热稳定和润滑体系研究" 1493974604
   "/dev/null" 1493946389 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1492575644 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/share/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1492575648 1408 5937f58aa508ea2cea4901c07d10f5fe ""
+  "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1492575648 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1492575651 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1492575651 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1492575651 1004 54797486969f23fa377b128694d548df ""
@@ -128,6 +130,7 @@
   "/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty" 1492575657 145304 c1d766aa2e99bfd7c88991e357108c76 ""
   "/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg" 1492575657 549 e7553134efaf62922106a54300834ab9 ""
   "/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty" 1492575657 1704 f155bd31324526584df93d8880629e82 ""
+  "/usr/share/texmf-dist/tex/latex/footmisc/footmisc.sty" 1492575761 25776 d28bd6d82f168f8cb2268584b67a2a98 ""
   "/usr/share/texmf-dist/tex/latex/geometry/geometry.sty" 1492575657 40502 e003406220954b0716679d7928aedd8a ""
   "/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1492575657 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1492575657 1224 978390e9c2234eab29404bc21b268d1e ""
@@ -157,6 +160,9 @@
   "/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty" 1492575656 348 8927fde343487e003b01a4c2ca34073b ""
   "/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty" 1492575656 274 4cad6e665cc93ac2ac979039a94fa1e1 ""
   "/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty" 1492575656 325 2bcd023400636339210573e2b3ee298b ""
+  "/usr/share/texmf-dist/tex/latex/psnfss/pifont.sty" 1492575655 2284 330328193b4aeb08dd45b0dd3e5ae732 ""
+  "/usr/share/texmf-dist/tex/latex/psnfss/upsy.fd" 1492575655 148 2da0acd77cba348f34823f44cabf0058 ""
+  "/usr/share/texmf-dist/tex/latex/psnfss/upzd.fd" 1492575655 148 b2a94082cb802f90d3daf6dd0c7188a0 ""
   "/usr/share/texmf-dist/tex/latex/setspace/setspace.sty" 1492575655 22913 a27d7908fc6f0385466454a966a316eb ""
   "/usr/share/texmf-dist/tex/latex/tipa/t3cmr.fd" 1492575655 1257 fd5b1c2f0106f9cf12cdb2ff961987c5 ""
   "/usr/share/texmf-dist/tex/latex/tipa/t3enc.def" 1492575655 26483 c461a68c34040cb0d96c43e86c012a6d ""
@@ -176,12 +182,12 @@
   "/usr/share/texmf-dist/tex/xelatex/xunicode/xunicode.sty" 1492575653 205722 8027ed7ab2230086d647802c25f3ee42 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1492575665 31661 3832dc67fcae1bb0c47594ea86c25797 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1493035628 4105414 37596d74308c2cf41d736eb72d22e63c ""
-  "CPVC热稳定和润滑体系研究.aux" 1493950443 5367 023281b3b9cd498fad1a6faa9a80a4a6 ""
-  "CPVC热稳定和润滑体系研究.bbl" 1493950440 172 0f878da47a8fc3bfc43f1de53a63f182 "bibtex CPVC热稳定和润滑体系研究"
-  "CPVC热稳定和润滑体系研究.tex" 1493950424 22841 19db17c1937850bc55771c275175f49d ""
-  "CPVC热稳定和润滑体系研究.toc" 1493950443 1334 c5407b15403be863ebf1ff63e4e46c29 ""
+  "CPVC热稳定和润滑体系研究.aux" 1493974604 7307 3c7b05cd6e343ac585969294a794ae0f ""
+  "CPVC热稳定和润滑体系研究.bbl" 1493974600 516 94d7ec780cf788c8f7ca4d034d16771a "bibtex CPVC热稳定和润滑体系研究"
+  "CPVC热稳定和润滑体系研究.tex" 1493974587 34246 70a6e89aaf1348a2534c35ee6e649064 ""
+  "CPVC热稳定和润滑体系研究.toc" 1493974604 2541 90fbb3a1469c55f91947ca2141c0d875 ""
   (generated)
   "CPVC热稳定和润滑体系研究.aux"
-  "CPVC热稳定和润滑体系研究.log"
-  "CPVC热稳定和润滑体系研究.xdv"
   "CPVC热稳定和润滑体系研究.toc"
+  "CPVC热稳定和润滑体系研究.xdv"
+  "CPVC热稳定和润滑体系研究.log"

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.4.24)  5 MAY 2017 10:14
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.4.24)  5 MAY 2017 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1578,23 +1578,50 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \c@nlinenum=\count192
 \TeXr@lab=\toks41
 )
+(/usr/share/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/share/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks42
+\footnotemargin=\dimen304
+\c@pp@next@reset=\count193
+\c@@fnserial=\count194
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
 (/usr/share/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
 (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen304
-\captionmargin@=\dimen305
-\captionwidth=\dimen306
-\caption@tempdima=\dimen307
-\caption@indent=\dimen308
-\caption@parindent=\dimen309
-\caption@hangindent=\dimen310
+\captionmargin=\dimen305
+\captionmargin@=\dimen306
+\captionwidth=\dimen307
+\caption@tempdima=\dimen308
+\caption@indent=\dimen309
+\caption@parindent=\dimen310
+\caption@hangindent=\dimen311
 )
-\c@ContinuedFloat=\count193
+\c@ContinuedFloat=\count195
 )
-\g__fontspec_family_TimesNewRoman_int=\count194
+\g__fontspec_family_TimesNewRoman_int=\count196
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1620,8 +1647,8 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"Times New
 . Roman/BI/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 .................................................
-LaTeX Info: Redefining \rmfamily on input line 40.
-\g__fontspec_family_Arial_int=\count195
+LaTeX Info: Redefining \rmfamily on input line 42.
+\g__fontspec_family_Arial_int=\count197
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1647,13 +1674,13 @@ LaTeX Info: Redefining \rmfamily on input line 40.
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 . <->"Arial/BI/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 .................................................
-LaTeX Info: Redefining \sffamily on input line 41.
+LaTeX Info: Redefining \sffamily on input line 43.
 .................................................
 . fontspec info: "no-scripts"
 . 
 . Font "Noto Mono" does not contain any OpenType `Script' information.
 .................................................
-\g__fontspec_family_NotoMono_int=\count196
+\g__fontspec_family_NotoMono_int=\count198
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -1684,14 +1711,14 @@ LaTeX Info: Redefining \sffamily on input line 41.
 . \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
 . \hyphenchar \font =\c_minus_one 
 .................................................
-LaTeX Info: Redefining \ttfamily on input line 42.
+LaTeX Info: Redefining \ttfamily on input line 44.
 
 *************************************************
 * xeCJK warning: "CJKfamily-redef"
 * 
 * Redefining CJKfamily `\CJKrmdefault' (FandolSong-Regular(0)).
 *************************************************
-\g__fontspec_family_STZhongsong_int=\count197
+\g__fontspec_family_STZhongsong_int=\count199
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -1723,35 +1750,37 @@ LaTeX Info: Redefining \ttfamily on input line 42.
 .................................................
 (/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-) (./CPVC热稳定和润滑体系研究.aux)
+)
+Package footmisc Info: Declaring symbol style circled on input line 126.
+ (./CPVC热稳定和润滑体系研究.aux)
 \openout1 = `CPVC热稳定和润滑体系研究.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 124.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 124.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 131.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 131.
 
 (/usr/share/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    ... okay on input line 131.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 124.
+LaTeX Info: Redefining \selectfont on input line 131.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1759,64 +1788,64 @@ LaTeX Info: Redefining \selectfont on input line 124.
 .................................................
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 124.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 124.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 124.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 124.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 124.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 124.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 124.
-LaTeX Font Info:    Redeclaring math accent \check on input line 124.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 124.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 124.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 124.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 124.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 124.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 131.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 131.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 131.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 131.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 131.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 131.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 131.
+LaTeX Font Info:    Redeclaring math accent \check on input line 131.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 131.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 131.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 131.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 131.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 124.
+(Font)              `operators' in the math version `normal' on input line 131.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 1
-24.
+31.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 124.
+(Font)              `operators' in the math version `bold' on input line 131.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
-124.
+131.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
-input line 124.
+input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
- 124.
+ 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/bx/n on input line
- 124.
+ 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 124.
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/NotoMono(0)/m/n on input line 124.
+(Font)                  OT1/cmtt/m/n --> TU/NotoMono(0)/m/n on input line 131.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/bx/n on
- input line 124.
+ input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/bx/it on input li
-ne 124.
+ne 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/bx/n on input line 124.
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/bx/n on input line 131.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/NotoMono(0)/bx/n on input line 124.
+(Font)                  OT1/cmtt/m/n --> TU/NotoMono(0)/bx/n on input line 131.
 
 
 *** you should *not* be loading the inputenc package
@@ -1859,6 +1888,11 @@ ABD: EveryShipout initializing macros
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \Pifont with sig. 'm' on line 131.
+.................................................
 [1
 
 ] [1] (./CPVC热稳定和润滑体系研究.toc)
@@ -1878,32 +1912,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
-Overfull \hbox (9.4014pt too wide) in paragraph at lines 214--214
-\TU/STZhongsong(0)/m/n/12 减 少。|  在 氯 含 量 大 于 \TU/TimesNewRoman(0)/m/n/12 65% |\
-TU/STZhongsong(0)/m/n/12 （质 量 分 数）|  以 后，| \TU/TimesNewRoman(0)/m/n/12 CPVC \TU
-/STZhongsong(0)/m/n/12 分 子 的 主 要 性 能 由[]
+[3] [4] [5] [6] [7] [8] [9] [10]
+Overfull \hbox (0.77818pt too wide) in paragraph at lines 409--410
+[]\TU/STZhongsong(0)/m/n/12 甲 基 硅 油：|  即 聚 二 甲 基 硅 氧 烷，|  无 色、|  无 味，|  透 明、|  
+黏 稠 液 体，|  分 子 量 为 \TU/TimesNewRoman(0)/m/n/12 5000$\OMS/cmsy/m/n/12 ^^X$\TU/Ti
+mesNewRoman(0)/m/n/12 10000\TU/STZhongsong(0)/m/n/12 ，|
  []
 
-[4] [5]
-Overfull \hbox (14.45955pt too wide) in paragraph at lines 330--331
-|\TU/STZhongsong(0)/m/n/12 （[]） 、|  二 碱 式 硬 脂 酸 铅  |（[]）|  和 铅 白  |（[]） 。|
- []
-
-[6] [7]
+[11]
 第二章
-[8
+[12
 
 ]
 第三章
-(./CPVC热稳定和润滑体系研究.bbl [9
+[13
 
-]
+] (./CPVC热稳定和润滑体系研究.bbl
 
 LaTeX Font Warning: Font shape `TU/STZhongsong(0)/m/it' undefined
 (Font)              using `TU/STZhongsong(0)/m/n' instead on input line 6.
 
-) [10
+) [14
+
 
 ] (./CPVC热稳定和润滑体系研究.aux)
 
@@ -1911,12 +1941,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 34328 strings out of 493068
- 709713 string characters out of 6141028
- 800600 words of memory out of 5000000
- 37763 multiletter control sequences out of 15000+600000
- 15612 words of font info for 107 fonts, out of 8000000 for 9000
+ 34523 strings out of 493068
+ 713852 string characters out of 6141028
+ 805791 words of memory out of 5000000
+ 37942 multiletter control sequences out of 15000+600000
+ 17022 words of font info for 111 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 62i,18n,95p,10420b,1709s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,95p,10420b,1713s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on CPVC热稳定和润滑体系研究.xdv (12 pages, 317776 bytes).
+Output written on CPVC热稳定和润滑体系研究.xdv (16 pages, 399680 bytes).
