@@ -76,6 +76,7 @@
 \renewcommand{\thesection}{第\arabic{chapter}. \arabic{section}节}
 \renewcommand{\thesubsection}{\arabic{chapter}. \arabic{section}. \arabic{subsection}}
 \renewcommand{\thesubsubsection}{(\arabic{subsubsection}) }
+
 % 实现带圈脚注样式
 \DefineFNsymbols{circled}{{\ding{182}}{\ding{183}}{\ding{184}}
 {\ding{185}}{\ding{186}}{\ding{187}}{\ding{188}}{\ding{189}}{\ding{190}}{\ding{191}}}
@@ -114,6 +115,7 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 %   \setpolymerdelim[]  设定括号样式，若为圆括号则()
 %   \chemfig{-[@{op,.75}]CH=CH-\lewis{2.,C}H-CH_2-[@{cl,.25}]}  此处.75  .25两个参数分别为两个化学键在括号左边部分的比例
 %   \makebraces[5pt,5pt]{}{op}{cl}  此处 5pt 为两个括号的大小
+
 
 %-------------------------------设置快捷命令-----------------------------%
 \newcommand{\cd}{$^{\circ}$C}  %摄氏度
@@ -213,17 +215,17 @@ CPVC 树脂在塑料管材（冷热水管、化工管、电力电缆护套、喷
         \caption{CPVC 管材与其他塑料管材主要力学性能对比\cite{9}}
         \label{tab1}
         \begin{center}
-        \scriptsize{
+        \footnotesize{
             \begin{tabular}{cccccc}
-                \hline
+                \Xhline{1pt}
                 塑料管材 & \makecell[c]{拉伸强度 \\ (23\cd)/MPa} & \makecell[c]{热膨胀系数 \\ $\rm{\times 10^4/K^{-1}}$} & \makecell[c]{热传导率/ \\ $[\rm{W/(m\cdot K)}]$} & \makecell[c]{氧指数/ \\ \%} & \makecell[c]{氧气透过量(70\cd、1个大气压)/ \\ $[\rm{cm^3/(m^2\cdot d)}]$}  \\
-                \hline
+                \Xhline{0.5pt}
                 CPVC 管材 & 55 & 0.7 & 0.14 & 60 & <1 \\
                 PVC 管材 & 50 & 0.7 & 0.14 & 45 & <1  \\
                 PP-R 管材 & 30 & 1.5 & 0.22 & 18 & 13$\sim$16 \\
                 PE-X 管材 & 25 & 1.5 & 0.22 & 17 & 13 \\
                 PB 管材 & 27 & 1.3 & 0.22 & 18 & 16   \\
-                \hline
+                \Xhline{1pt}
             \end{tabular}
         }
         \end{center}
@@ -307,9 +309,11 @@ CPVC 分解的机理主要包括自由基机理、离子-分子机理和单分�
         \schemestart
             \lewis{0.,Cl}
             \+
-            \chemfig{\va{C}-CH(-[2]{Cl})-CH(-[2]H)-}
+            \chemfig{\va{C}-[@{op,.75}]CH(-[2]{Cl})-CH(-[2]H)-[@{cl,.25}]}
+            \makebraces[5pt,5pt]{}{op}{cl}
             \arrow(.mid east--.mid west)
-            \chemfig{\va{C}-CH(-[2]{Cl})-CH(-[2]{Cl})-}
+            \chemfig{\va{C}-[@{op,.75}]CH(-[2]{Cl})-CH(-[2]{Cl})-[@{cl,.25}]}
+            \makebraces[5pt,5pt]{}{op}{cl}
             \+
             \lewis{0.,H}
         \schemestop
@@ -319,9 +323,11 @@ CPVC 分解的机理主要包括自由基机理、离子-分子机理和单分�
         \schemestart
             \lewis{0.,Cl}
             \+
-            \chemfig{\va{C}-CH(-[2]{Cl})-CCl(-[2]H)-}
+            \chemfig{\va{C}-[@{op,.75}]CH(-[2]{Cl})-CCl(-[2]H)-[@{cl,.25}]}
+            \makebraces[5pt,5pt]{}{op}{cl}
             \arrow(.mid east--.mid west)
-            \chemfig{\va{C}-CH(-[2]{Cl})-CCl(-[2]{Cl})-}
+            \chemfig{\va{C}-[@{op,.75}]CH(-[2]{Cl})-CCl(-[2]{Cl})-[@{cl,.25}]}
+            \makebraces[5pt,5pt]{}{op}{cl}
             \+
             \lewis{0.,H}
         \schemestop
@@ -449,7 +455,45 @@ CPVC 套管主要用于电力电缆的铺设并起导向和保护作用，更多
     \item 酚醛、氨基树脂：适用硬脂酸锌等金属皂、脂肪酰胺、乙撑双硬脂硬酰胺、高熔点石蜡
 \end{enumerate}
 
+\chapter{实验步骤与操作}
+
+\section{制样流程}
+
+
 \chapter{CPVC 润滑体系研究}
+
+\section{配方设计}
+使用 3 种氧化聚乙烯蜡：AC-316、AC-617、AC-629 以及 1 种聚乙烯蜡：PEW-0380 进行配方设计，具体配方见表 \ref{tab2}：
+
+\begin{table}[htbp]
+    \caption{CPVC 外润滑剂配方设计表}
+    \label{tab2}
+    \begin{center}
+    \footnotesize{
+        \begin{tabular}{cccccccccc}
+            \Xhline{1pt}
+            CPVC & \makecell[c]{抗冲击\\改性剂} & 有机锡 & \makecell[c]{AC-\\316} & \makecell[c]{AC-\\617} & \makecell[c]{AC-\\629} & \makecell[c]{PEW-\\0380} & \makecell[c]{汉高\\G-60} & \makecell[c]{加工\\助剂} & \makecell[c]{钛白粉}   \\
+            \Xhline{0.5pt}
+            100 & 8 & 2 & 1.3 & & & & 1.2 & 3 & 2   \\
+            100 & 8 & 2 & & 1.3 & & & 1.2 & 3 & 2   \\
+            100 & 8 & 2 & & & 1.3 & & 1.2 & 3 & 2   \\
+            100 & 8 & 2 & & & & 1.3 & 1.2 & 3 & 2   \\
+            \Xhline{1pt}
+        \end{tabular}
+    }
+    \end{center}
+\end{table}
+
+
+\section{实验步骤}
+
+\subsection{制样流程}
+
+\subsubsection{混料}
+按配方准确称量各助剂，将 CPVC 树脂及各种助剂按顺序加入到高速搅拌机中制成配混料。
+\subsubsection{塑化开炼}
+将开放式塑炼机升温至 190\cd，混炼 5 min后出片。
+
 
 \chapter{CPVC 热稳定体系研究}
 
