@@ -36,6 +36,7 @@
 \usepackage{pifont}     %实现带圈数字，①开始于\ding{192}
 \usepackage[perpage,symbol*]{footmisc}
 \usepackage[justification=centering]{caption}   %标题设置
+\usepackage{float}      %设定图片的位置
 
 %----------------------------设置字体族--------------------------%
 %\CJKfamily{SimSun}
@@ -590,17 +591,98 @@ aiN\footnotemark[4] = (\frac{2.57 J \times x\%\footnotemark[5]}{S\footnotemark[6
 \section{外润滑剂测试}
 
 \subsection{动态热稳定性}
+由测得的 转矩-时间 数据绘制曲线，见图 \ref{fig1hakee}。
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \begin{center}
         \input{src/origin/1/hakee.tex}
     \end{center}
-    \caption{外润滑剂动态热稳定性测试}
-    \label{fig3}
+    \caption{外润滑剂动态热稳定性}
+    \label{fig1hakee}
 \end{figure}
+
+由图可得如下数据表，见表 \ref{tab1hakee}。
+
+\begin{table}[htbp]
+    \caption{动态热稳定性能数据表}
+    \label{tab1hakee}
+    \begin{center}
+    \footnotesize{
+        \begin{tabular}{cccc}
+            \Xhline{1pt}
+            润滑剂种类 & \makecell[c]{最大转矩/\\N$\cdot$m} & \makecell[c]{平衡转矩/\\N$\cdot$m} & \makecell[c]{热稳定时间/\\min} \\
+            \Xhline{0.5pt}
+            AC-316 & 29.6 & 12.1 & 6.2  \\
+            AC-617 & 26.5 & 12.5 & 6.6  \\
+            AC-629 & 24.9 & 12.4 & 5.9  \\
+            PEW-0380 & 28.0 & 12.2 & 7.3    \\
+            \Xhline{1pt}
+        \end{tabular}
+    }
+    \end{center}
+\end{table}
+
 
 \subsection{静态热稳定性}
 
+\begin{table}[htbp]
+    \caption{热烘箱法测定样品颜色随时间变化}
+    \label{tab1static}
+    \begin{center}
+    \footnotesize{
+        \begin{tabular}{cccccccc}
+            \Xhline{1pt}
+            \multirow{2}{*}{Sample} & \multicolumn{7}{c}{加入不同种类稳定剂的 CPVC 试样 180\cd 烘箱中颜色随时间的变化}\\
+            \cline{2-8}
+            & 0 min & 20 min & 30 min & 70 min & 120 min & 250 min & 360 min  \\
+            \Xhline{0.5pt} 
+            AC-316 & \multicolumn{7}{c}{\multirow{4}{*}{
+                \includegraphics[width=.7\linewidth]{src/origin/1/static.png}
+            }}  \\
+            AC-617  \\
+            AC-629  \\
+            PEW-0380    \\
+            \Xhline{1pt}
+        \end{tabular}
+    }
+    \end{center}
+\end{table}
+
+\subsection{玻璃化转变温度}
+\begin{figure}[H]
+    \begin{center}
+        \input{src/origin/1/tg.tex}
+    \end{center}
+    \caption{外润滑剂玻璃化转变温度}
+\end{figure}
+
+\section{内外润滑剂组合体系测试}
+
+\subsection{玻璃化转变温度}
+\begin{figure}[H]
+    \begin{center}
+        \input{src/origin/2/tg.tex}
+    \end{center}
+    \caption{内外润滑剂组合玻璃化转变温度}
+\end{figure}
+
+\section{热稳定体系测试}
+
+\subsection{动态热稳定性}
+\begin{figure}[H]
+    \begin{center}
+        \input{src/origin/3/hakee.tex}
+    \end{center}
+    \caption{热稳定剂动态热稳定性}
+\end{figure}
+
+\subsection{玻璃化转变温度}
+\begin{figure}[H]
+    \begin{center}
+        \input{src/origin/3/tg.tex}
+    \end{center}
+    \caption{热稳定剂玻璃化转变温度}
+\end{figure}
 
 \clearpage
 \addcontentsline{toc}{chapter}{参考文献}
