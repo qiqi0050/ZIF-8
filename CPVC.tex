@@ -36,7 +36,8 @@
 \usepackage{pifont}     %实现带圈数字，①开始于\ding{192}
 \usepackage[perpage,symbol*]{footmisc}
 \usepackage[justification=centering]{caption}   %标题设置
-\usepackage{float}      %设定图片的位置
+\usepackage{float}      %设定图片的位置    \[H]可固定图片位置
+
 
 %----------------------------设置字体族--------------------------%
 %\CJKfamily{SimSun}
@@ -165,7 +166,7 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 \section{CPVC 简介及其基本性能}
 
 \subsection{CPVC 简介}
-氯化聚氯乙烯（CPVC），也称为过氯乙烯，是将聚氯乙烯（PVC）进一步氯化改性得到的产物。在氯化过程中，一般可将 $\omega_{Cl}$\footnote{$\omega_{Cl}$: Cl 的质量分数，下同} 从 PVC 的 56.7\% 提高到 CPVC 的 61.0\%$\sim$68.0\%。研究表明，当氯含增加至 65\% 以上时，CPVC 的拉伸强度和弯曲强度呈直线上升，同时脆性也随之增大。随着氯含量的增加，共价键极性增大，分子间相互作用力增强，使 CPVC 树脂在物理力学性能，特别是耐候性、抗老化性、耐化学腐蚀性、热变形温度、阻燃自熄性等均比 PVC 有较大的提高，是近几年来应用领域发展速度较快的新型塑料材料。
+氯化聚氯乙烯（CPVC），也称为过氯乙烯，是通过将聚氯乙烯（PVC）进一步氯化改性得到的产品。理想的聚 1, 2-二氯乙烯的 $\omega_{Cl, CPVC}$\footnote{$\omega_{Cl}$: Cl 的质量分数，下同} 为 73.7\%。在氯化过程中，一般可将 $\omega_{Cl}$ 从 56.7\%\footnote{$\omega_{Cl, PVC} = 56.7\%$} 提高到 61.0\%$\sim$68.0\%。研究表明，当氯含增加至 65\% 以上时，CPVC 的拉伸强度和弯曲强度呈直线上升，同时脆性也随之增大。随着氯含量的增加，共价键极性增大，分子间相互作用力增强，使 CPVC 树脂在物理力学性能，特别是耐候性、抗老化性、耐化学腐蚀性、热变形温度、阻燃自熄性等均比 PVC 有较大的提高，是近几年来应用领域发展速度较快的新型塑料材料。
 
 \subsection{CPVC 分子结构}
 CPVC 是 PVC 与 \chemfig{Cl_2} 在热及引发剂等作用下反应生成的产物。在氯化反应中，氯原子优先进攻 PVC 分子链中的 \chemfig{\va{C}-CH_2-} 基团，而不是 \chemfig{\va{C}-CHCl-} 基团，因此得到的 CPVC 主要是 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节构成。当 CPVC 的 $\omega_{Cl}$ 低于 63\% 时，生成的大部分为 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构，具有一定的偶极矩，使得分子间范德华力增强；当 $\omega_{Cl}$ 高于 63\% 时，才生成极性较小的 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构。由此可见，PVC 的氯化主要发生在亚甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节；其次再发生在次甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节。随着氯化程度的提高，\chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 与 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节含量的比值增大。最终 CPVC 的 $\omega_{Cl}$ 由通氯量决定，其性能主要取决于氯化工艺。
@@ -485,7 +486,14 @@ CPVC 套管主要用于电力电缆的铺设并起导向和保护作用，更多
     \item 转矩流变仪
 \end{enumerate}
 
-\chapter{实验步骤}
+\chapter{研究方案及步骤}
+
+\begin{figure}[htbp]
+    \begin{center}
+        
+    \end{center}
+    \caption{研究方案流程图}
+\end{figure}
 
 \section{配方设计原则}
 CPVC 润滑体系与热稳定体系采用控制变量法进行配方设计，配方的基本组成如表 \ref{tab2} 所示
@@ -530,8 +538,8 @@ CPVC 润滑体系与热稳定体系采用控制变量法进行配方设计，配
 \section{表征方法}
 对标准样条进行力学、热学、断面形貌等性能的测试与表征。
 
-\subsection{动态热稳定性}
-动态热稳定性是指在热、空气和剪切力的共同作用下，热稳定剂抵抗 CPVC 热分解的能力。本实验采用转矩流变仪\footnote{HAKEE Corp.}进行测试。首先将流变仪的温度设定为 205\cd，转速为 50 r/min。将 60 g 的样品加入到流变仪中，记录流变仪的转矩随时间的变化。在最终得到的 转矩-时间 曲线中，如图 \ref{figExHakee} 所示，笫一个峰为熔化峰，所对应的转矩为熔化转矩（fusion torgue）。熔化峰之后，由于物料进一步塑化并且熔体温度上升，使试样转矩下降，并随着熔体温度趋于恒定，转矩曲线呈现基本平稳段，所对应的转矩称为熔体转矩（melt torgue），也称平衡转矩。平衡转矩可用于评定样品的加工性能，平衡转矩越小，样品加工时所需的能耗越小，对设备的损耗也越小。随着试验的继续，CPVC 发生分解，此时曲线急速上升，混合物的长期热稳定性就是根据从熔化峰到转矩突然增大点所经历的时间来评定。
+\subsection{动态热稳定性}\label{sectionHakee}
+动态热稳定性是指在热、空气和剪切力的共同作用下，热稳定剂抵抗 CPVC 热分解的能力。本实验采用转矩流变仪进行测试。首先将流变仪的温度设定为 205\cd，转速为 50 r/min。将 60 g 的样品加入到流变仪中，记录流变仪的转矩随时间的变化。在最终得到的 转矩-时间 曲线中，如图 \ref{figExHakee} 所示，笫一个峰为熔化峰，所对应的转矩为熔化转矩（fusion torgue）。熔化峰之后，由于物料进一步塑化并且熔体温度上升，使试样转矩下降，并随着熔体温度趋于恒定，转矩曲线呈现基本平稳段，所对应的转矩称为熔体转矩（melt torgue），也称平衡转矩。平衡转矩可用于评定样品的加工性能，平衡转矩越小，样品加工时所需的能耗越小，对设备的损耗也越小。随着试验的继续，CPVC 发生分解，此时曲线急速上升，混合物的长期热稳定性就是根据从熔化峰到转矩突然增大点所经历的时间来评定。
 
 \begin{figure}[htbp]
     \begin{center}
@@ -542,7 +550,7 @@ CPVC 润滑体系与热稳定体系采用控制变量法进行配方设计，配
 \end{figure}
 
 \subsection{静态热稳定性}
-CPVC 配混料在加工或再加工过程都会在较高温度的设备中停留一定时间，CPVC 制品在使用过程中也会经受一定的环境温度，这就要求热稳定剂能赋予 CPVC 以合适的静态热稳定性。根据 CPVC 热分解导致物料颜色变化或释放出氯化氢的特征，建立了变色法和脱氯化氢法两类评价静态热稳定性的方法。本实验采用变色法\footnote{GB/T 9349—2002《聚氯乙烯、相关含氯均聚物和共聚物及其共混物热稳定性的测定 变色法》}进行 CPVC 静态热稳定性的表征。\par
+CPVC 配混料在加工或再加工过程都会在较高温度的设备中停留一定时间，CPVC 制品在使用过程中也会经受一定的环境温度，这就要求热稳定剂能赋予 CPVC 以合适的静态热稳定性。根据 CPVC 热分解导致物料颜色变化或释放出氯化氢的特征，建立了变色法和脱氯化氢法两类评价静态热稳定性的方法。本实验采用变色法\footnote{执行标准 GB/T 9349—2002《聚氯乙烯、相关含氯均聚物和共聚物及其共混物热稳定性的测定 变色法》}进行 CPVC 静态热稳定性的表征。\par
 烘箱法：将边长 15 mm，厚度约 1 mm 的正方形试样，放在平铺于架子上的新的干净铝箔上面，在强制鼓风烘箱中于高温下加热不同时间。每隔一定时间取出一片试样，从测试开始至最初观察到颜色变化即为初期热稳定定性，从测试开始至试样完全变黑的时间则为长期热稳定性。
 
 \subsection{玻璃化转变温度}
@@ -557,36 +565,44 @@ CPVC 配混料在加工或再加工过程都会在较高温度的设备中停留
 \end{figure}
 
 \subsection{拉伸强度}
-拉伸强度定义为断裂前试样所能承受的最大应力，单位为 MPa，用来衡量材料的抗拉性能。拉伸强度等于承受的最大载荷 $P$ 与试样的宽度 $b$ 和厚度 $d$ 的乘积的比值。本实验中采用万能试验机进行拉伸强度测试\footnote{GB/T 1040.2-2006}，设置拉伸速率为 10 mm/min，夹具距离为 80 mm，样条的最窄宽度为 6 mm，厚度为 4 mm。
+拉伸强度定义为断裂前试样所能承受的最大应力，单位为 MPa，用来评价材料的抗拉性能。拉伸强度的计算公式见式 \eqref{eqTenS}，其中 $P$ 为样品承受的最大载荷，$b$ 和 $d$ 分别为试样的宽度和厚度。
 
 \begin{equation}
-\sigma_t = \frac{P}{bd}
+    \label{eqTenS}
+    \sigma_t = \frac{P}{bd}
 \end{equation}
+
+本实验中采用万能试验机进行拉伸强度测试\footnote{执行标准 GB/T 1040.2-2006}，设置拉伸速率为 10 mm/min，夹具距离为 80 mm，样条的最窄宽度为 6 mm，厚度为 4 mm。
 
 \subsection{弯曲强度}
-弯曲强度是指材料在弯曲负荷作用下破裂或达到规定弯矩时能承受的最大应力，此应力为弯曲时的最大正应力，以 MPa 为单位。它反映了材料抗弯曲的能力，用来衡量材料的弯曲性能。横力弯曲时，弯矩 M 随截面位置变化，一般情况下，最大正应力 $\sigma_{max}$ 发生于弯矩最大的截面上，且离中性轴最远处。因此，最大正应力不仅与弯矩 M 有关，还与截面形状和尺寸有关。最大正应力计算公式为 $\sigma_{max} = \frac{M_{max}}{W}$ ，
-同样使用万能试验机进行弯曲强度测试\footnote{GB/T 9341-2008}，设置移动速率为 2 mm/min，样条尺寸为 80 mm$\times$10 mm$\times$4 mm，跨度为 64 mm。
-
-\subsection{缺口冲击强度}
-本实验采用落锤冲击强度仪进行缺口冲击强度测试\footnote{ISO 180/1A}，缺口形状为“V”形，深度为 2 mm，落锤满载能量为 2.75 J。其中 $aiN$ 为
+弯曲强度是指材料在弯曲负荷作用下破裂或达到规定弯矩时能承受的最大应力，此应力为弯曲时的最大正应力，以 MPa 为单位。它反映了材料抗弯曲的能力，用来评价材料的弯曲性能。横力弯曲时，弯矩 M 随截面位置变化，一般情况下，最大正应力 $\sigma_{max}$ 发生于弯矩最大的截面上，且离中性轴最远处。因此，最大正应力不仅与弯矩 M 有关，还与截面形状和尺寸有关。最大正应力计算公式见式 \eqref{eqBendS}，其中 $\sigma_{max}$ 为最大弯矩，$W$ 为抗弯截面系数。
 
 \begin{equation}
-aiN\footnotemark[4] = (\frac{2.57 J \times x\%\footnotemark[5]}{S\footnotemark[6]}) KJ/m^2
+    \label{eqBendS}
+    \sigma_{max} = \frac{M_{max}}{W}
 \end{equation}
 
-\footnotetext[4]{缺口冲击强度（Izod impact strength of a notched specimen）}
-\footnotetext[5]{实验测得百分比}
-\footnotetext[6]{缺口处截面面积}
+本实验同样使用万能试验机进行弯曲强度测试\footnote{执行标准 GB/T 9341-2008}，设置移动速率为 2 mm/min，样条尺寸为 80 mm$\times$10 mm$\times$4 mm，跨度为 64 mm。
+
+\subsection{缺口冲击强度}
+冲击强度是材料在受到冲击后断裂吸收冲击能量的能力，用于评价材料的抗冲击能力或判断材料的脆性和韧性程度。缺口冲击强度的计算公式见式 \eqref{eqImpactS}，其中 $aiN$ 为缺口冲击强度（Izod impact strength of a notched specimen），$x\%$ 为实验测得百分比，$S$ 为缺口处截面面积。
+
+\begin{equation}
+    \label{eqImpactS}
+    aiN = (\frac{2.57 J \times x\%}{S}) KJ/m^2
+\end{equation}
+
+本实验采用落锤冲击强度仪进行缺口冲击强度测试\footnote{执行标准 ISO 180/1A}，缺口形状为“V”形，深度为 2 mm，落锤满载能量为 2.75 J。
 
 
 \chapter{CPVC 润滑体系研究}
 
 \section{配方设计}
-使用 3 种氧化聚乙烯蜡：AC-316、AC-617、AC-629 以及 1 种聚乙烯蜡：PEW-0380 进行配方设计，具体配方见表 \ref{tab3}：
+使用 3 种氧化聚乙烯蜡：AC-316、AC-617、AC-629 以及 1 种聚乙烯蜡：PEW-0380 进行配方设计。保持其他助剂的种类和含量不变，独立改变外润滑剂的种类设计了 4 种配方，具体配方见表 \ref{tabSmoothPre}：
 
 \begin{table}[htbp]
     \caption{CPVC 外润滑剂配方设计表}
-    \label{tab3}
+    \label{tabSmoothPre}
     \begin{center}
     \footnotesize{
         \begin{tabular}{cccccccccc}
@@ -603,35 +619,37 @@ aiN\footnotemark[4] = (\frac{2.57 J \times x\%\footnotemark[5]}{S\footnotemark[6
     \end{center}
 \end{table}
 
+\section{制样}
+
 
 \chapter{CPVC 热稳定体系研究}
 
 
-\chapter{实验结果与数据}
+\chapter{实验数据与处理}
 
 \section{外润滑剂测试}
 
 \subsection{动态热稳定性}
-由测得的数据绘制 转矩-时间 曲线，见图 \ref{fig1hakee}。
+由转矩流变仪测得的数据绘制 转矩-时间 曲线，见图 \ref{fig1Hakee}。
 
 \begin{figure}[H]
     \begin{center}
         \input{src/origin/1/hakee.tex}
     \end{center}
     \caption{外润滑剂动态热稳定性}
-    \label{fig1hakee}
+    \label{fig1Hakee}
 \end{figure}
 
-由图可得如下数据表，见表 \ref{tab1hakee}。
+由图 \ref{fig1Hakee} 可得到该体系的熔化转矩、平衡转矩与热稳定时间\footnote{见 \pageref{sectionHakee} 页 \ref{sectionHakee} 动态热稳定性}，具体数据见表 \ref{tab1Hakee}。
 
 \begin{table}[htbp]
     \caption{动态热稳定性能数据表}
-    \label{tab1hakee}
+    \label{tab1Hakee}
     \begin{center}
     \footnotesize{
         \begin{tabular}{cccc}
             \Xhline{1pt}
-            润滑剂种类 & \makecell[c]{最大转矩/\\N$\cdot$m} & \makecell[c]{平衡转矩/\\N$\cdot$m} & \makecell[c]{热稳定时间/\\min} \\
+            润滑剂种类 & \makecell[c]{熔化转矩/\\N$\cdot$m} & \makecell[c]{平衡转矩/\\N$\cdot$m} & \makecell[c]{热稳定时间/\\min} \\
             \Xhline{0.5pt}
             AC-316 & 29.6 & 12.1 & 6.2  \\
             AC-617 & 26.5 & 12.5 & 6.6  \\
@@ -643,6 +661,7 @@ aiN\footnotemark[4] = (\frac{2.57 J \times x\%\footnotemark[5]}{S\footnotemark[6
     \end{center}
 \end{table}
 
+由表中数据
 
 \subsection{静态热稳定性}
 
@@ -702,6 +721,8 @@ aiN\footnotemark[4] = (\frac{2.57 J \times x\%\footnotemark[5]}{S\footnotemark[6
     \end{center}
     \caption{热稳定剂玻璃化转变温度}
 \end{figure}
+
+
 
 \clearpage
 \addcontentsline{toc}{chapter}{参考文献}

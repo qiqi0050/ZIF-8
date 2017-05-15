@@ -18,10 +18,19 @@ plot "src/origin/1/hakee.ori" using 1:2 title 'AC-316' smooth csplines with line
 set output "src/origin/1/tg.tex"
 
 unset key
-set key top left box
+set key left center box
 
 set xrange[40: 200]
 set yrange[0: 1]
+
+set arrow from 120, 0.7 to 146.09, 0.6727 lt 1
+set label '146.09\cd' at 120, 0.7 offset -7, 0
+set arrow from 130, 0.8 to 147.78, 0.7318 lt 2
+set label '147.78\cd' at 130, 0.8 offset -7, 0
+set arrow from 170, 0.9 to 155.17, 0.8172 lt 3
+set label '155.17\cd' at 170, 0.9 offset 0, 0
+set arrow from 130, 0.9 to 154.03, 0.848 lt 4
+set label '154.03\cd' at 130, 0.9 offset -7, 0
 
 set xlabel '温度/\cd'
 set ylabel '损耗因子'
@@ -32,10 +41,23 @@ plot "src/origin/1/tg.ori" using 1:2 title 'AC-316' smooth csplines with lines, 
 set output "src/origin/2/tg.tex"
 
 unset key
-set key top left box
+unset arrow
+unset label
+set key center left box
 
 set xrange[40: 200]
 set yrange[0: 1]
+
+set arrow from 120, 0.9 to 144.67, 0.848 lt 1
+set label '144.67\cd' at 120, 0.9 offset -7, 0
+set arrow from 120, 0.7 to 145.8, 0.687 lt 2
+set label '145.8\cd' at 120, 0.7 offset -6, 0
+set arrow from 150, 0.9 to 148.06, 0.8058 lt 3
+set label '148.06\cd' at 150, 0.9 offset -3, 0.5
+set arrow from 170, 0.8 to 150.89, 0.814 lt 4
+set label '150.89\cd' at 170, 0.8 offset 0, 0
+set arrow from 170, 0.9 to 155.42, 0.8543 lt 5
+set label '155.42\cd' at 170, 0.9 offset 0, 0
 
 set xlabel '温度/\cd'
 set ylabel '损耗因子'
@@ -71,14 +93,14 @@ set ylabel '损耗因子'
 plot "src/origin/3/tg.ori" using 1:2 title 'TMG-234' smooth csplines with lines, "src/origin/3/tg.ori" using 1:3 title 'T-190 A' smooth csplines with lines, "src/origin/3/tg.ori" using 1:4 title 'Orgin Tin(l)' smooth csplines with lines
 
 
-set output "src/origin/1/hakee.tex"
+set output "src/example/hakee.tex"
 
 unset key
 set xrange[0:8]
 set yrange[-10: 30]
 
 set arrow from 2, 27 to 1.2, 26.35361843
-set label "熔化峰" at 2, 27
+set label "fusion peak" at 2, 27
 set arrow from 1.2, 26.35361843 to 1.2, -10 nohead lt 0
 set arrow from 1.2, 26.35361843 to 0, 26.35361843 nohead lt 0
 set label "fusion\ntorgue" at 0, 26.35361843 offset 1, 0.5
@@ -98,6 +120,8 @@ plot "src/origin/1/hakee.ori" using 1:2 smooth csplines with lines
 set output "src/example/tg.tex"
 
 unset key
+unset label
+unset arrow
 set xrange[40: 200]
 set yrange[0: 1]
 
