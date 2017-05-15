@@ -18,11 +18,11 @@
 \documentclass[a4paper, oneside, onecolumn, 12pt]{ctexrep}    %transmag 实现双列排版，摘要跨列
 
 %----------------------------引入宏包---------------------------%
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc} %特殊符号
 \usepackage{xeCJK}      %CJK引擎
 %\usepackage{abstract}  %摘要与关键词
 \usepackage{graphicx}   %插图工具包
-\usepackage{natbib}     %漂亮的bib引用
+\usepackage[super, square]{natbib}     %漂亮的bib引用    super-上标, square-方括号
 \usepackage{bm}         %设置缩进
 \usepackage{fancyhdr}   %定制页眉页脚
 \usepackage{chemfig}    %化学方程式
@@ -37,6 +37,7 @@
 \usepackage[perpage,symbol*]{footmisc}
 \usepackage[justification=centering]{caption}   %标题设置
 \usepackage{float}      %设定图片的位置    \[H]可固定图片位置
+\usepackage{tikz}       %tikz图形库
 
 
 %----------------------------设置字体族--------------------------%
@@ -120,6 +121,9 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 %   \chemfig{-[@{op,.75}]CH=CH-\lewis{2.,C}H-CH_2-[@{cl,.25}]}  此处.75  .25两个参数分别为两个化学键在括号左边部分的比例
 %   \makebraces[5pt,5pt]{}{op}{cl}  此处 5pt 为两个括号的大小
 
+%引用 tikz 装饰库
+\usetikzlibrary{decorations.pathmorphing}
+
 
 %-------------------------------设置快捷命令-----------------------------%
 \newcommand{\cd}{$^{\circ}$C}  %摄氏度
@@ -156,7 +160,7 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 \maketitle
 
 \begin{abstract}
-    \textbf{\xiaosihao 介绍了碳纤维增强塑料复合材料（CFRP）在国内外的研究进展。介绍并总结了生产CFRP的各种成型工艺的优缺点。碳纤维复合材料在各个领域的具体应用，以及碳纤维的性能优势和改性方法。}
+    \xiaosihao 介绍了碳纤维增强塑料复合材料（CFRP）在国内外的研究进展。介绍并总结了生产CFRP的各种成型工艺的优缺点。碳纤维复合材料在各个领域的具体应用，以及碳纤维的性能优势和改性方法。
 \end{abstract}
 
 \tableofcontents
@@ -166,32 +170,8 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 \section{CPVC 简介及其基本性能}
 
 \subsection{CPVC 简介}
-氯化聚氯乙烯（CPVC），也称为过氯乙烯，是通过将聚氯乙烯（PVC）进一步氯化改性得到的产品。理想的聚 1, 2-二氯乙烯的 $\omega_{Cl, CPVC}$\footnote{$\omega_{Cl}$: Cl 的质量分数，下同} 为 73.7\%。在氯化过程中，一般可将 $\omega_{Cl}$ 从 56.7\%\footnote{$\omega_{Cl, PVC} = 56.7\%$} 提高到 61.0\%$\sim$68.0\%。研究表明，当氯含增加至 65\% 以上时，CPVC 的拉伸强度和弯曲强度呈直线上升，同时脆性也随之增大。随着氯含量的增加，共价键极性增大，分子间相互作用力增强，使 CPVC 树脂在物理力学性能，特别是耐候性、抗老化性、耐化学腐蚀性、热变形温度、阻燃自熄性等均比 PVC 有较大的提高，是近几年来应用领域发展速度较快的新型塑料材料。
-
-\subsection{CPVC 分子结构}
-CPVC 是 PVC 与 \chemfig{Cl_2} 在热及引发剂等作用下反应生成的产物。在氯化反应中，氯原子优先进攻 PVC 分子链中的 \chemfig{\va{C}-CH_2-} 基团，而不是 \chemfig{\va{C}-CHCl-} 基团，因此得到的 CPVC 主要是 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节构成。当 CPVC 的 $\omega_{Cl}$ 低于 63\% 时，生成的大部分为 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构，具有一定的偶极矩，使得分子间范德华力增强；当 $\omega_{Cl}$ 高于 63\% 时，才生成极性较小的 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构。由此可见，PVC 的氯化主要发生在亚甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节；其次再发生在次甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节。随着氯化程度的提高，\chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 与 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节含量的比值增大。最终 CPVC 的 $\omega_{Cl}$ 由通氯量决定，其性能主要取决于氯化工艺。
-    
-\subsection{氯在 CPVC 中的分布}
-CPVC 的结构单元主要包括 3 种基本结构（见图\ref{fig1}）。其中各种结构单元在分子链中的含量与分布情况会在很大程度上影响分子链的断裂速率和方式，从而对 CPVC 的热稳定性以及加工性能产生很大的影响。因此，测定 CPVC 中的 $\omega_{Cl}$ 及在分子链中的分布情况是非常重要的。
-
-\begin{figure}[htbp]
-    \begin{center}
-        \begin{minipage}[t]{0.2\linewidth}
-            \centering
-            \chemfig{-C(-[2]Cl)(-[6]H)-C(-[2]H)(-[6]H)-}
-        \end{minipage}
-        \begin{minipage}[t]{0.2\linewidth}
-            \centering
-            \chemfig{-C(-[2]Cl)(-[6]H)-C(-[2]H)(-[6]Cl)-}
-        \end{minipage}
-        \begin{minipage}[t]{0.2\linewidth}
-            \centering
-            \chemfig{-C(-[2]Cl)(-[6]H)-C(-[2]Cl)(-[6]Cl)-}
-        \end{minipage}
-    \end{center}
-    \caption{CPVC 分子链中 3 种基本结构单元}
-    \label{fig1}
-\end{figure}
+氯化聚氯乙烯（CPVC），也称为过氯乙烯，是通过将聚氯乙烯（PVC）进一步氯化改性得到的产品。理想的聚 1, 2-二氯乙烯的 $\omega_{Cl}$\footnote{$\omega_{Cl}$: Cl 的质量分数，下同} 为 73.7\%。在氯化过程中，一般可将 $\omega_{Cl}$ 从 56.7\%\footnote{$\omega_{Cl, PVC} = 56.7\%$} 提高到 61.0\%$\sim$68.0\%。\par
+研究表明，当氯含量达到 65\% 以上时，CPVC 的拉伸强度和弯曲强度呈线性增加，同时脆性也随之增大。由于分子在结构上的不规整性增大，分子结晶度下降，分子链的极性增强，因而其热变形温度大大上升\cite{14}。随着氯含量的增加，CPVC 分子中共价键极性增大，分子间相互作用力增强，使得 CPVC 树脂的物理力学性能，特别是耐候性、抗老化性、耐化学腐蚀性、热变形温度、阻燃自熄性等均比 PVC 有较大的提高，是近几年来应用领域发展速度较快的新型塑料材料。
 
 \subsection{CPVC 相对于 PVC 的优缺点}
 \begin{itemize}
@@ -213,11 +193,11 @@ CPVC 的结构单元主要包括 3 种基本结构（见图\ref{fig1}）。其�
 CPVC 树脂在塑料管材（冷热水管、化工管、电力电缆护套、喷灌水管等）方面应用广泛，主要得益于其具有如下的优良特性。
 
 \begin{enumerate}[(1) ]
-    \item 与其他塑料管材相比，CPVC 树脂具有拉伸强度高、热膨胀系数小、热传导率低、难燃、氧气透过率小等特点，具体数据见表 \ref{tab1}。
+    \item 与其他塑料管材相比，CPVC 树脂具有拉伸强度高、热膨胀系数小、热传导率低、难燃、氧气透过率小等特点，具体数据见表 \ref{tabCPVCQuality}。
     
     \begin{table}[htbp]
         \caption{CPVC 管材与其他塑料管材主要力学性能对比\cite{9}}
-        \label{tab1}
+        \label{tabCPVCQuality}
         \begin{center}
         \footnotesize{
             \begin{tabular}{cccccc}
@@ -235,8 +215,9 @@ CPVC 树脂在塑料管材（冷热水管、化工管、电力电缆护套、喷
         \end{center}
     \end{table}
     
-    \item 耐化学腐蚀性能好。工业用化学药剂大都会对金属设备造成腐蚀，导致渗漏、流程限制、使用寿命短等问题。CPVC 不仅在常温下耐化学腐蚀性能优异，而且在较高温度下，CPVC 仍能保持较好的耐酸、耐碱、耐腐蚀性能，远优于 PVC 以及其他树脂。CPVC 在许多应用方面可取代传统材料，用以应对需要直接接触腐蚀性物品的场合，如处理质量较差的水、酸性物质、碱性物质以及其他具有腐蚀性的溶液。CPVC 能提供较长的使用寿命、较低的维修成本，并拥有良好的环境适应力。
-    \item 阻燃性能好。由于氯含量的增加，CPVC 拥有优于 PVC 的阻燃性能。CPVC 塑料在空气中能够发生自熄，同时具有限制火焰扩散及低烟雾生成量等特性。
+    \item 耐化学腐蚀性能好。工业用化学药剂大都会对金属设备造成腐蚀，导致渗漏、流程限制、使用寿命短等问题。CPVC 不仅在常温下耐化学腐蚀性能优异，而且在较高温度下，CPVC 仍能保持较好的耐酸、耐碱、耐腐蚀性能，远优于 PVC 以及其他树脂。CPVC 在许多应用方面可取代传统材料，用以应对需要直接接触腐蚀性物品的场合，如处理氨基磺酸、氯酸钠、硅酸钠、25\% 高锰酸钾、大于 25\% 浓度的丙二醇、酚、甲酸（< 25\% 浓度）、铬酸、丁酸（< 3\% 浓度）、氯胺、氯化铵等溶液。CPVC 能提供较长的使用寿命、较低的维修成本，并拥有良好的环境适应力。
+    \item 阻燃性能好。CPVC 的氧指数为 60，所以其阻燃性高，燃烧后不产生滴落物，燃烧扩散慢，可限制烟雾的产生，并且不会产生有害气体。
+    \item 很多聚烯烃材料（包括 PP、PE、PB 等）遇水中余氯时可能会发生分解，而 CPVC 则不会受水中的余氯的影响，不会出现裂痕和崩漏\cite{17, 18}。
 \end{enumerate}
 
 \subsection{CPVC 降解机理}
@@ -247,7 +228,7 @@ CPVC 分解的机理主要包括自由基机理、离子-分子机理和单分�
 \setpolymerdelim[]
 
 \begin{enumerate}[(1) ]
-    \item 氯化聚氯乙烯分子中某些薄弱结构，特别是烯丙基氯分解，产生 \lewis{2.,Cl}。
+    \item 氯化聚氯乙烯分子中某些薄弱结构，特别是烯丙基氯结构分解，产生 \lewis{2.,Cl}。
         \begin{center}
         \schemestart
             \chemfig{\va{C}-[@{op,.75}]CH=CH-CH(-[2]Cl)-CH_2-[@{cl,.25}]}
@@ -285,12 +266,58 @@ CPVC 分解的机理主要包括自由基机理、离子-分子机理和单分�
         \end{center}
 \end{enumerate}
 
+\subsection{CPVC 不稳定氯原子的测定}
+不稳定氯原子是降低 CPVC 热稳定性的主要原因，不稳定氯原子主要包括链端烯丙基氯、链内烯丙基氯和叔氯\cite{15}。目前，不稳定氯原子含量的唯一有效的测定方法是酚烷基化法\cite{16}。烯丙基氯与叔氯较一般的氯原子有较大的反应活性，它们均可与苯酚发生取代反应，如图 \ref{phenol}：
+
+\begin{figure}[H]
+    \begin{center}
+        \schemestart
+        \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C(-[2]H)(-[6]{Cl})-CH_2-C(-[2]{Cl})(-[6]{CH_2(-[6]CHCl([6]-[,1.5,,,decorate,decoration=snake]))})-CH_2-C(-[2]H)(-[6]{Cl})-[,1.5,,,decorate,decoration=snake]}
+        \+
+        \chemfig{*6([:-30]=-=(-[0]{OH})-=-)}
+        \schemestop
+    \end{center}
+    \begin{center}
+        \schemestart
+        \arrow(.mid east--.mid west)
+        \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C(-[2]H)(-[6]{Cl})-CH_2-C([2]-*6(=-=(-[2]{OH})-=-))(-[6]{CH_2(-[6]CHCl([6]-[,1.5,,,decorate,decoration=snake]))})-CH_2-C(-[2]H)(-[6]{Cl})-[,1.5,,,decorate,decoration=snake]}
+        \schemestop
+    \end{center}
+    \caption{不稳定氯原子与苯酚反应方程式}
+    \label{phenol}
+\end{figure}
+
 \subsection{CPVC 配方设计、混料}
 不同用途和性能的 CPVC 制品其配方设计不同，但是其基本配方都含有热稳定剂、润滑剂及其他助剂（如加工改性剂、冲击改性剂、填料、光稳定剂、着色剂、抗静电剂等）。\par
 热稳定剂是 CPVC 加工中必不可少的助剂之一。润滑剂的作用在于减小物料和设备之间的摩擦力（外润滑作用），以及物料分子链之间的内摩擦力（内润滑作用）。\par
 加入到 CPVC 树脂中的助剂，必须要经过混料，依靠混料设备的搅拌、振动、翻滚、研磨达到扩散、对流和剪切的作用，使物料混合均匀，保证后续成型的一致性。
 
-\section{CPVC 的合成方法与结构}
+\section{CPVC 的结构与合成工艺}
+
+\subsection{CPVC 分子结构}
+CPVC 是 PVC 与 \chemfig{Cl_2} 在热及引发剂等作用下反应生成的产物。研究表明，在氯化反应中，氯原子优先进攻 PVC 分子链中的 \chemfig{\va{C}-CH_2-} 基团，而不是 \chemfig{\va{C}-CHCl-} 基团，因此得到的 CPVC 主要是 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节构成。当 CPVC 的 $\omega_{Cl}$ 低于 63\% 时，生成的大部分为 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构，具有一定的偶极矩，使得分子间范德华力增强；当 $\omega_{Cl}$ 高于 63\% 时，才逐渐生成极性较小的 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构。由此可见，PVC 的氯化反应主要发生在亚甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节；其次再发生在次甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节。随着氯化程度的提高，\chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 与 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节含量的比值增大。最终 CPVC 的 $\omega_{Cl}$ 由通氯量决定，其性能主要取决于氯化工艺。
+    
+\subsection{氯在 CPVC 中的分布}
+CPVC 的结构单元主要包括 3 种基本结构（见图\ref{fig1}）。其中各种结构单元在分子链中的含量与分布情况会在很大程度上影响分子链的断裂速率和方式，从而对 CPVC 的热稳定性以及加工性能产生很大的影响。因此，测定 CPVC 中的 $\omega_{Cl}$ 及在分子链中的分布情况是非常重要的。
+
+\begin{figure}[htbp]
+    \begin{center}
+        \begin{minipage}[t]{0.25\linewidth}
+            \centering
+            \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C(-[2]Cl)(-[6]H)-C(-[2]H)(-[6]H)-[,1.5,,,decorate,decoration=snake]}
+        \end{minipage}
+        \begin{minipage}[t]{0.25\linewidth}
+            \centering
+            \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C(-[2]Cl)(-[6]H)-C(-[2]H)(-[6]Cl)-[,1.5,,,decorate,decoration=snake]}
+        \end{minipage}
+        \begin{minipage}[t]{0.25\linewidth}
+            \centering
+            \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C(-[2]Cl)(-[6]H)-C(-[2]Cl)(-[6]Cl)-[,1.5,,,decorate,decoration=snake]}
+        \end{minipage}
+    \end{center}
+    \caption{CPVC 分子链中 3 种基本结构单元}
+    \label{fig1}
+\end{figure}
 
 \subsection{CPVC 合成方法}
 目前，CPVC 树脂的生产工艺按氯化介质不同分为溶剂法、水相悬浮法和气固相法。溶剂法由于其使用有机溶剂、能耗较高，目前几乎被淘汰。水相悬浮法具有操作简单、产品性能较好等优点，是目前国内外 CPVC 生产所采用的主要方法。但该法流程较长，生产“三废”较多，成本相对较高。用气固相搅拌式氯化法生产 CPVC，流程简单、污染物排放小，但传热效果较差，不适宜大规模生产。\par
@@ -374,7 +401,7 @@ CPVC 套管主要用于电力电缆的铺设并起导向和保护作用，更多
 工业用 CPVC 管材的国家标准为 GB/T18998.2-2003《工业用氯化聚氯乙烯（PVC-C）管道系统 第 2 部分：管材》。就该标准而言，其与 CPVC 冷热水管几乎是一样的。
 
 
-\section{CPVC 热稳定剂概述}
+\section{热稳定剂概述}
 
 热稳定剂是一类能防止或减少聚合物在加工使用过程中受热而发生降解或交联,延长复合材料使用寿命的添加剂。CPVC 常用的热稳定剂主要种类有：铅盐类热稳定剂、金属皂复合热稳定剂、有机锡热稳定剂、稀土类热稳定剂。
 
@@ -395,7 +422,7 @@ CPVC 套管主要用于电力电缆的铺设并起导向和保护作用，更多
 
 \subsection{热稳定机理}
 
-热稳定剂的稳定剂主要有以下 4 种：
+热稳定剂的稳定机理主要有以下 4 种：
 \begin{enumerate}[(1) ]
     \item 吸收中和 HCl，抑制其自动催化作用。这类稳定剂包括铅盐类、有机酸金属皂类、有机锡化合物、环氧化合物、酚盐及金属硫醇盐等。它们可与 HCl 反应,抑制 CPVC 脱 HCl 的反应。
     \item 置换 CPVC 分子中不稳定的烯丙基氯原子抑制脱 HCl。如有机锡稳定剂与 CPVC 分子的不稳定氯原子发生配位结合，在配位体中，有机锡与不稳定氯原子置换。
