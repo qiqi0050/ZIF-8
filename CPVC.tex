@@ -86,6 +86,9 @@
 {\ding{185}}{\ding{186}}{\ding{187}}{\ding{188}}{\ding{189}}{\ding{190}}{\ding{191}}}
 \setfnsymbol{circled}
 
+% 设置小写字母脚注样式
+%\renewcommand{\thefootnote}{\alph{footnote}}
+
 
 %-------------------------------设置页面属性-----------------------------%
 \usepackage{indentfirst}
@@ -182,7 +185,7 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
     \item{
         缺点：\par
         \begin{enumerate}[(1) ]
-            \item CPVC 树脂的熔融温度与热分解温度相近，可加工温度范围小\footnote{180$\sim$190\cd}，容易发生热分解；
+            \item CPVC 树脂的熔融温度与热分解温度相近，可加工温度范围小\footnote{一般为 180$\sim$190\cd}，容易发生热分解；
             \item CPVC 熔体黏度高，约为 PVC 树脂熔体黏度的 3 倍左右，加工成型能耗大；
             \item 制品脆性大，冲击强度较低。
         \end{enumerate}
@@ -200,7 +203,7 @@ CPVC 树脂在塑料管材（冷热水管、化工管、电力电缆护套、喷
         \label{tabCPVCMach}
         \begin{center}
         \footnotesize{
-            \begin{tabular}{cccccc}
+            \begin{tabular}{cc|cccc}
                 \Xhline{1pt}
                 \multicolumn{2}{c|}{物理参数} & \multicolumn{4}{c}{力学参数} \\
                 \Xhline{1pt}
@@ -259,57 +262,83 @@ CPVC 树脂在塑料管材（冷热水管、化工管、电力电缆护套、喷
 \end{enumerate}
 
 \subsection{CPVC 降解机理}
-PVC 在加工过程中不太稳定，极易发生降解脱除 HCl，其重要原因是 PVC 分子链中存在着多种结构缺陷。通过红外光谱（IR）及核磁共振波谱观察发现，PVC 中的异常结构主要包括头-头结构、不饱和双键结构（末端双键、内部双键及共扼双键）、不稳定氯结构（烯丙基氯与叔碳氯）、支链结构（短支链结构与长支链结构）及二氯末端结构等。不稳定氯结构包括烯丙基氯和叔碳氯结构，其中烯丙基氯结构的含量远远高于叔碳氯结构的含量，极易诱发 PVC 脱 HCl。CPVC 与 PVC 具有相似的结构，分子链中也存在着这些结构缺陷。研究表明：CPVC 树脂的加工稳定性远不如 PVC。CPVC 在加工过程中，存在着明显的热分解现象，分解释放出 HCl 气体后树脂严重变色。CPVC 发生热降解时，分子链中所存在的叔碳原子或末端双键会使 CPVC 的降解加剧。\par
+在加工过程中 PVC 具有较差的热稳定性，极易发生降解脱除 HCl，其重要原因是 PVC 分子链中的多种结构缺陷。通过红外光谱（IR）及核磁共振波谱观察发现，PVC 中的结构缺陷主要包括 头-头 结构、不饱和双键结构（末端双键、内部双键及共轭双键）、不稳定氯结构（烯丙基氯与叔碳氯）、支链结构（短支链结构与长支链结构）及二氯末端结构等。不稳定氯原子主要包括链端烯丙基氯、链内烯丙基氯和叔氯\cite{15}，其中烯丙基氯结构的含量远远高于叔碳氯结构的含量，极易诱发 PVC 脱 HCl。CPVC 与 PVC 具有相似的结构，分子链中也存在着这些结构缺陷，并且CPVC 树脂的加工稳定性远不如 PVC\cite{6}。\par
 \setatomsep{1.5em}
 靖志国等 \cite{4} 利用 $\rm{^{13}}$C NMR 对 CPVC 分子链序列结构的测定发现，CPVC 分子中氯原子沿碳链分布情况复杂，其分子链结构相当于氯乙烯、1,2-二氯乙烯以及 1,1-二氯乙烯的三元共聚物。CPVC 分子中主要结构的摩尔分数为:\chemfig{\va{C}-CHCl-} 含量为 65\%$\sim$70\%；\chemfig{\va{C}-CH_2-} 含量为 20\%$\sim$30\%；\chemfig{\va{C}-CCl_2-} 含量为 5\%$\sim$10\%。随着 $\omega_{Cl}$ 的增大，\chemfig{\va{C}-CHCl-} 和 \chemfig{\va{C}-CCl_2-} 两种结构单元的总量增加，\chemfig{\va{C}-CH_2-} 结构单元减少。在 $\omega_{Cl}$ 大于 65\% 以后，CPVC 分子的主要性能由 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构控制，随着 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构的增加，CPVC 的玻璃化转变温度提高，耐热性增强。因而提高 CPVC 的性能需要在增加 \chemfig{\va{C}-CHCl-} 结构和减少 \chemfig{\va{C}-CH_2-} 结构的同时尽量避免 \chemfig{\va{C}-CCl_2-} 结构和各种缺陷结构的产生。\chemfig{\va{C}-CCl_2-} 结构会使分子链的极性减小，导致材料的玻璃化转变温度相应降低；另外，\chemfig{\va{C}-CCl_2-} 结构易使材料受热脱 HCl，使分子链容易受热分解，热稳定性变差。\par
-CPVC 分解的机理主要包括自由基机理、离子-分子机理和单分子机理。其中自由机理最为普遍，已成为稳定剂形成和发展的理论基础。
+
+研究表明，CPVC 的热分解分为两步进行\cite{12}。第一步为脱除 HCl，生成 \chemfig{-[,1.5,,,decorate,decoration=snake]C([2]-Cl)=C([2]-H)-[,1.5,,,decorate,decoration=snake]} 和 \chemfig{-[,1.5,,,decorate,decoration=snake]C([2]=O)-[,1.5,,,decorate,decoration=snake]} 结构单元以及它们的共轭结构。第二步按 Diels–Alder 机理发生缩合反应，进一步生成具有多环结构的含氯芳香族化合物。\par
+含氯聚合物的脱 HCl 机理有单分子机理、离子型机理和自由基机理。马文光等\cite{22}通过 ESR\footnote{电子自旋法}的研究结果表明，CPVC 最可能发生的是自由基机理脱 HCl。其过程为不稳定氯原子在热的作用下脱离形成 \lewis{0.,Cl}$\;$，\lewis{0.,Cl}$\;$ 进一步引发拉链式分解反应。如反应 \eqref{eqCPVCDegrade1} 至反应 \eqref{eqCPVCDegrade3} 所示。
 
 \setpolymerdelim[]
 \setatomsep{2em}
 
-\begin{enumerate}[(1) ]
-    \item 氯化聚氯乙烯分子中某些薄弱结构，特别是烯丙基氯结构分解，产生 \lewis{2.,Cl}。
-        \begin{center}
-        \schemestart
-            \chemfig{\va{C}-[@{op,.75}]CH=CH-CH(-[2]Cl)-CH_2-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
-            \arrow(.mid east--.mid west)
-            \chemfig{\vphantom{C}-[@{op,.75}]CH=CH-\lewis{2.,C}H-CH_2-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
-            \+
-            \lewis{0.,Cl}
-        \schemestop
-        \end{center}
-    \item \lewis{2.,Cl} 从氯化聚氯乙烯分子中吸取氢原子，形成链自由基。\par
-        \begin{center}
-        \schemestart
-            \chemfig{\vphantom{C}-[@{op,.75}]\lewis{6.,C}H-CH(-[2]{Cl})-CH_2-CH(-[2]{Cl})-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
-            \arrow(.mid east--.mid west)
-            \chemfig{\vphantom{C}-[@{op,.75}]CH=CH-CH_2-CH(-[2]{Cl})-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
-            \+
-            \lewis{0.,Cl}
-        \schemestop
-        \end{center}
-    \item 氯化聚氯乙烯链自由基脱除 \lewis{2.,Cl}，在大分子中形成双键。新生成的 \lewis{2.,Cl} 使两步反应反复进行，即发生所谓的拉链式脱 HCl 反应。\par
-        \begin{center}
-        \schemestart
-            \chemfig{\vphantom{C}-[@{op,.75}]CH_2-CH(-[2]{Cl})-CH_2-CH(-[2]{Cl})-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
-            \arrow(.mid east--.mid west)
-            \chemfig{\vphantom{C}-[@{op,.75}]CH_2-\chemabove{C}{+}H-\chemabove{C}{-}H-CH(-[2]{Cl})-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
-            \+
-            \chemfig{HCl}
-        \schemestop
-        \end{center}
-\end{enumerate}
+氯化聚氯乙烯分子中某些薄弱结构，特别是烯丙基氯结构分解，产生 \lewis{0.,Cl}$\;$：
+    \begin{equation}
+    \small{
+    \label{eqCPVCDegrade1}
+    \schemestart
+        \chemfig{\va{C}-[,1.2,,,decorate,decoration=snake]CH=CH-CH(-[2]Cl)-CH_2-[,1.2,,,decorate,decoration=snake]}
+        \arrow(.mid east--.mid west)
+        \chemfig{\va{C}-[,1.2,,,decorate,decoration=snake]CH=CH-\lewis{2.,C}H-CH_2-[,1.2,,,decorate,decoration=snake]}
+        \makebraces[5pt,5pt]{}{op}{cl}
+        \+
+        \lewis{0.,Cl}
+    \schemestop
+    }
+    \end{equation}
+    
+\lewis{0.,Cl}$\;$ 从氯化聚氯乙烯分子中吸取氢原子，形成链自由基。ESR 信号证明了大分子自由基的存在：
+    \begin{equation}
+    \small{
+    \label{eqCPVCDegrade2}
+    \schemestart
+        \lewis{0.,Cl}
+        \+
+        \chemfig{\va{C}-[,1.2,,,decorate,decoration=snake]CH_2-CH([2]-Cl)-CH_2-CH([2]-Cl)-[,1.2,,,decorate,decoration=snake]}
+        \arrow(.mid east--.mid west)
+        \chemfig{\va{C}-[,1.2,,,decorate,decoration=snake]\lewis{2.,C}H-CH([2]-Cl)-CH_2-CH([2]-Cl)-[,1.2,,,decorate,decoration=snake]}
+        \+
+        \chemfig{HCl}
+    \schemestop
+    }
+    \end{equation}
+
+氯化聚氯乙烯链自由基脱除 \lewis{0.,Cl}$\;$，在大分子中形成双键。新生成的 \lewis{0.,Cl}$\;$ 促进反应 \eqref{eqCPVCDegrade2} 的发生，使两步反应反复进行，即发生拉链式脱 HCl 反应：
+    \begin{equation}
+    \small{
+    \label{eqCPVCDegrade3}
+    \schemestart
+        \chemfig{\va{C}-[,1.2,,,decorate,decoration=snake]\lewis{6.,C}H-CH(-[2]{Cl})-CH_2-CH(-[2]{Cl})-[,1.2,,,decorate,decoration=snake]}
+        \arrow(.mid east--.mid west)
+        \chemfig{\va{C}-[,1.2,,,decorate,decoration=snake]CH=CH-CH_2-CH(-[2]{Cl})-[,1.2,,,decorate,decoration=snake]}
+        \+
+        \lewis{0.,Cl}
+    \schemestop
+    }
+    \end{equation}
+
+大分子末端的引发剂残基在热的作用下也会脱去形成自由基 \lewis{0.,R}$\;$，\lewis{0.,R}$\;$ 又引起进一步的链锁分解反应：
+    \begin{equation}
+    \small{
+    \label{eqCPVCDegrade4}
+    \schemestart
+        \lewis{0.,R}
+        \+
+        \chemfig{\va{C}-[,1.2,,,decorate,decoration=snake]CH_2-CH(-[2]{Cl})-CH_2-CH(-[2]{Cl})-[,1.2,,,decorate,decoration=snake]}
+        \arrow(.mid east--.mid west)
+        \chemfig{\va{C}-[,1.2,,,decorate,decoration=snake]\lewis{2.,C}H-CH([2]-Cl)-CH_2-CH(-[2]{Cl})-[,1.2,,,decorate,decoration=snake]}
+        \+
+        \chemfig{RH}
+    \schemestop
+    }
+    \end{equation}
+
+在反应 \eqref{eqCPVCDegrade4} 之后，又会连续地发生反应 \eqref{eqCPVCDegrade3} 和反应 \eqref{eqCPVCDegrade2}。分解生成的大分子自由基也会发生链的转移，终止等反应形成支化、交联和不饱和双键结构。
 
 \subsection{CPVC 不稳定氯原子的测定}
-不稳定氯原子是降低 CPVC 热稳定性的主要原因，不稳定氯原子主要包括链端烯丙基氯、链内烯丙基氯和叔氯\cite{15}。目前，不稳定氯原子含量的唯一有效的测定方法是酚烷基化法\cite{16}。烯丙基氯与叔氯较一般的氯原子有较大的反应活性，它们均可与苯酚发生取代反应，如图 \ref{phenol}：
+不稳定氯原子是降低 CPVC 热稳定性的主要原因。目前，不稳定氯原子含量的唯一有效的测定方法是酚烷基化法\cite{16}。烯丙基氯与叔氯较一般的氯原子有较大的反应活性，它们均可与苯酚发生取代反应，如图 \ref{phenol}：
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \begin{center}
         \schemestart
         \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C(-[2]H)(-[6]{Cl})-CH_2-C(-[2]{Cl})(-[6]{CH_2(-[6]CHCl([6]-[,1.5,,,decorate,decoration=snake]))})-CH_2-C(-[2]H)(-[6]{Cl})-[,1.5,,,decorate,decoration=snake]}
@@ -699,6 +728,9 @@ CPVC 配混料在加工或再加工过程都会在较高温度的设备中停留
 \subsection{缺口冲击强度}
 冲击强度是材料在受到冲击后断裂吸收冲击能量的能力，用于评价材料的抗冲击能力或判断材料的脆性和韧性程度。缺口冲击强度的计算公式见式 \eqref{eqImpactS}，其中 $aiN$ 为缺口冲击强度（Izod impact strength of a notched specimen），$x\%$ 为实验测得百分比，$S$ 为缺口处截面面积。
 
+\subsection{SEM 观测冲击断裂面样貌}
+
+
 \begin{equation}
     \label{eqImpactS}
     aiN = (\frac{2.57 J \times x\%}{S}) KJ/m^2
@@ -838,7 +870,7 @@ CPVC 配混料在加工或再加工过程都会在较高温度的设备中停留
 
 \clearpage
 \addcontentsline{toc}{chapter}{参考文献}
-\bibliographystyle{plain}
+\bibliographystyle{unsrtnat}    %unsrtnat: sort with cite order; plainnat: sort with author name and year
 \bibliography{biblio.bib}
 
 \end{document}
