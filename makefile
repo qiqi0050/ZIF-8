@@ -9,7 +9,7 @@ CPVC.pdf: CPVC.tex biblio.bib $(plots)
 $(plots): plot.gnu $(origins)
 	gnuplot plot.gnu
 
-update:
+upload:
 	git add .
 	git commit -m "update"
 	git push
